@@ -91,3 +91,6 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 # For Python virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
+
+# For systemd user service ssh-agent.service
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
