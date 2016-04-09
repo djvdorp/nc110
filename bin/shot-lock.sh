@@ -5,8 +5,8 @@
 # Required packages: scrot, imagemagick (convert)
 # Don't forget to create a symlink for this file to use it: sudo ln -s ~/dotfiles/bin/shot-lock.sh /usr/local/bin/shot-lock
 
-SCREEN1=`tempfile --prefix shot- --suffix .png`
-SCREEN2=`tempfile --prefix shot- --suffix .png`
+SCREEN1=`mktemp --suffix .png`
+SCREEN2=`mktemp --suffix .png`
 
 scrot $SCREEN1
 convert $SCREEN1 -scale 20% -scale 500% $SCREEN2
